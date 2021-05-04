@@ -31,6 +31,77 @@ body {
   -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
   filter: grayscale(100%);
 }
+
+.container {
+  position: relative;
+  text-align: center;
+  color: white;
+  text-shadow: -1px -1px 0 rgb(177, 177, 177), 1px -1px 0 rgb(44, 80, 148),
+    -1px 1px 0 rgb(44, 80, 148), 1px 1px 0 rgb(177, 177, 177);
+}
+
+/* Centered text */
+.centered-text {
+  font-size: 13rem;
+  font-style: italic;
+  font-weight: bolder;
+  color: rgb(13, 40, 92);
+}
+@media screen and (max-width: 1000px) {
+  .centered-text {
+    font-size: 8rem;
+  }
+}
+@media screen and (max-width: 700px) {
+  .centered-text {
+    font-size: 3.5rem;
+  }
+}
+.centered {
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -webkit-animation: fadeinout 5s linear forwards;
+  animation: fadeinout 5s linear forwards;
+}
+.centered-mid {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -webkit-animation: fadeinout 6s linear forwards;
+  animation: fadeinout 6s linear forwards;
+}
+.centered-low {
+  position: absolute;
+  top: 80%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -webkit-animation: fadeinout 8s linear forwards;
+  animation: fadeinout 8s linear forwards;
+}
+
+@-webkit-keyframes fadeinout {
+  0%,
+  100% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeinout {
+  0%,
+  100% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
 /* Name */
 .main-name {
   font-size: 3rem;
@@ -163,10 +234,37 @@ body {
   }
 }
 
+/* Footer */
+footer {
+  text-decoration: none;
+  text-align: center;
+  font-size: 0.75rem;
+  color: rgb(23, 53, 107);
+  margin-bottom: 5px;
+}
+
+footer a {
+  text-decoration: none;
+  color: rgb(23, 53, 107);
+}
+/* Footer End */
+
 /* Coming Soon */
 .coming-soon {
   padding: 8rem 0;
   background-image: url(/images/axolotl.png);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.coming-soon-plant {
+  padding: 8rem 0;
+  background-image: url(/images/ivy.png);
+  /* background-repeat: ; */
+  background-position: center;
+}
+.coming-soon-travel {
+  padding: 8rem 0;
+  background-image: url(/images/dotted-plane.png);
   background-repeat: no-repeat;
   background-position: center;
 }
