@@ -10,7 +10,8 @@ body {
 
 .flex-container {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  flex-wrap: wrap;
 }
 .flex-item {
   flex: 50%;
@@ -21,83 +22,30 @@ body {
 .img-section {
   text-align: center;
   background: rgb(13, 40, 92);
+  margin-top: 3rem;
 }
 
 .main-img {
-  width: 75%;
+  width: 55%;
   border-radius: 2rem;
   box-shadow: 5px 10px 18px #888888;
   min-width: 200px;
   -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
   filter: grayscale(100%);
 }
-
-.container {
+.animate-top {
   position: relative;
-  text-align: center;
-  color: white;
-  text-shadow: -1px -1px 0 rgb(177, 177, 177), 1px -1px 0 rgb(44, 80, 148),
-    -1px 1px 0 rgb(44, 80, 148), 1px 1px 0 rgb(177, 177, 177);
+  animation: animatetop 1.4s;
 }
 
-/* Centered text */
-.centered-text {
-  font-size: 13rem;
-  /* font-style: italic; */
-  font-weight: bolder;
-  color: rgb(13, 40, 92);
-}
-@media screen and (max-width: 1000px) {
-  .centered-text {
-    font-size: 8rem;
-  }
-}
-@media screen and (max-width: 700px) {
-  .centered-text {
-    font-size: 3.5rem;
-  }
-}
-.centered {
-  position: absolute;
-  top: 20%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  -webkit-animation: fadeinout 5s linear forwards;
-  animation: fadeinout 5s linear forwards;
-}
-.centered-mid {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  -webkit-animation: fadeinout 6s linear forwards;
-  animation: fadeinout 6s linear forwards;
-}
-.centered-low {
-  position: absolute;
-  top: 80%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  -webkit-animation: fadeinout 8s linear forwards;
-  animation: fadeinout 8s linear forwards;
-}
-
-@-webkit-keyframes fadeinout {
-  0%,
-  100% {
+@keyframes animatetop {
+  from {
+    /* top: -300px; */
+    top: 600px;
     opacity: 0;
   }
-  50% {
-    opacity: 1;
-  }
-}
-
-@keyframes fadeinout {
-  0%,
-  100% {
-    opacity: 0;
-  }
-  50% {
+  to {
+    top: 0;
     opacity: 1;
   }
 }
