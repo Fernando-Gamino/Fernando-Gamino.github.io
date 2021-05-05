@@ -43,7 +43,7 @@ body {
 /* Centered text */
 .centered-text {
   font-size: 13rem;
-  font-style: italic;
+  /* font-style: italic; */
   font-weight: bolder;
   color: rgb(13, 40, 92);
 }
