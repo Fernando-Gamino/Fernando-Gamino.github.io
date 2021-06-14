@@ -21,6 +21,7 @@ body {
   padding-top: 60px;
 }
 .nav-text {
+  padding: 20px;
   color: #ddd;
   font-weight: 100;
   font-size: 30px;
